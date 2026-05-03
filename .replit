@@ -1,0 +1,20 @@
+modules = ["nodejs-20"]
+run = "npm run dev"
+hidden = [".config", "package-lock.json", "node_modules", "dist"]
+entrypoint = "src/App.jsx"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+deploymentTarget = "static"
+build = ["sh", "-c", "npm install && npm run build"]
+publicDir = "dist"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+# Replit Agent automatically reads .agents/skills/ — no config flag required.
+# The CometChat skill set is pre-installed in this template; ask the Agent
+# "add chat to my app" and it will run /cometchat.

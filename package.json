@@ -1,0 +1,21 @@
+{
+  "name": "cometchat-replit-template",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Replit Template for adding CometChat to a React app via Replit Agent. Ships with @cometchat/skills pre-installed in .agents/skills/.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "sync-skills": "bash scripts/sync-skills.sh"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}
